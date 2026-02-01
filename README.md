@@ -227,8 +227,6 @@ AdaptiveCP(
 - `predict(alpha, X_test, X_train, Y_train, X_cal=None, Y_cal=None, **kwargs)`: Returns `(lower, upper)` adaptive prediction intervals
 
 
-***Note: You can replace the` quantile network kernel` with your own PyTorch model by subclassing `AdaptiveCP` and overriding the `build_quantile_network()` method to fit the local quantile.***
-
 ---
 ### Metrics
 
@@ -314,7 +312,7 @@ Learns spatially varying quantiles via a neural network:
    [Ŷ_test - c·q̂(X_test)·scale(X_test), Ŷ_test + c·q̂(X_test)·scale(X_test)]
    ```
 
-***Note: You can replace the` quantile network kernel` with your own PyTorch model by subclassing `AdaptiveCP` and overriding the `build_quantile_network()` method to fit the local quantile $\hat q$.***
+***Note: You can replace the` quantile network kernel` with your own PyTorch quantile model by subclassing `AdaptiveCP` and overriding the `build_quantile_network()` method to fit the local quantile $\hat q$.***
 
 **Paper**: https://arxiv.org/abs/2509.13717
 

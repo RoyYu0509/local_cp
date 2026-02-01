@@ -366,6 +366,8 @@ def adaptive_cp_test_uncertainties_grid(
         idx_subset = to_tensor(idx_subset, device)
     
     results = []
+
+    print(f"on device: {device}")
     
     if parallel and len(alphas) > 1:
         # Parallel evaluation - each alpha trains independently
